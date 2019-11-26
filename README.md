@@ -29,11 +29,12 @@ If the terminal scares you, feel free to use one of the many readily available g
 
 Please report problems and request features [as a GitHub issue](/issues). Make sure you have the latest version of the scripts and your app is up to date. And please, always **indicate both your Glyphs and macOS version.** Thank you.
 
-*All of the copy above is pulled from Rainer Erich Scheichelbauer [Glyphs-Scripts](https://github.com/mekkablue/Glyphs-Scripts) repository.*
 
 # License
 
 Copyright 2019 Matthew Smith (@mttymtt). This repository may contain code samples by Rainer Erich Scheichelbauer (@mekkablue), Georg Seifert (@schriftgestalt), and Tal Leming (@typesupply). Others may be credited in the docstring of individual scripts.
+
+*The copy used in the About, Installation, git, and Troubleshooting sections are all pulled from Rainer Erich Scheichelbauer's [Glyphs-Scripts](https://github.com/mekkablue/Glyphs-Scripts) repository.*
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use the software provided here except in compliance with the License.
