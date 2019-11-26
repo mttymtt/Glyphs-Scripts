@@ -1,8 +1,8 @@
 #MenuTitle: Compare Master Widths
 # -*- coding: utf-8 -*-
-# __doc__="""
-# Compare widths across font masters.
-# """
+__doc__="""
+Compare widths across font masters of the open font. Outputs a report in Macro Window, and opens Glyphs with mismatched widths in a new tab.
+"""
 
 f = Glyphs.font # open font
 
@@ -78,6 +78,6 @@ for g in [g for g in f.glyphs if f.export]:
             # print "%s : %s\n%s : %s" % (firstMaster.name, firstMasterGlyphWidth, masterName.name, masterGlyphWidth)
             print"%s | %s" % (divider, spacer)
 
-# if firstMasterGlyphWidth != masterGlyphWidth:
-#     newTab = f.newTab()
-#     newTab.layers = unevenGlyphs
+if firstMasterGlyphWidth != masterGlyphWidth:
+    newTab = f.newTab()
+    newTab.layers = unevenGlyphs
