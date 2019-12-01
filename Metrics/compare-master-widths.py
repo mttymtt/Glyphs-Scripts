@@ -28,7 +28,7 @@ Glyphs.showMacroWindow()
 masterNames = []
 for i, master in enumerate(f.masters):
     masterNames.append(master.name)
-fontNameLen = len(max(masterNames, key=len)) # this is the longest master name
+masterNameLen = len(max(masterNames, key=len)) # this is the longest master name
 
 # make a list of glyph widths
 # then determine which is the longest unit
@@ -50,7 +50,7 @@ for g in exportableGlyphs:
 glyphNameLen = len(max(glyphNames, key=len)) # this is the longest glyph name
 
 # labels for table
-col1Name = "Master"
+col1Name = f.familyName # current font name
 col1NameLen = len(col1Name)
 
 col2Name = "Width"
@@ -58,7 +58,7 @@ col2NameLen = len(col2Name)
 
 # make a list of the longest font name, glyph name, and col1 label
 # then determine which is the longest
-lenList = [fontNameLen, glyphNameLen, col1NameLen]
+lenList = [masterNameLen, glyphNameLen, col1NameLen]
 col1Width = max(lenList)
 
 # make a list of the longest width len, and col2 label
@@ -103,6 +103,7 @@ newTabGlyphs = []
 
 for g in unevenGlyphs:
     glyphName = g.name
+    glyphNameFormatted = glyphName.ljust(col1Width + 1)
 
     # reformat the list of uneven glyphs to reopen later in a new tab
     firstMaster = f.masters[0]
@@ -118,11 +119,14 @@ for g in unevenGlyphs:
         masterGlyph = g.layers[master.id]
         masterGlyphWidth = masterGlyph.width
 
-        glyphNameFormatted = glyphName.ljust(col1Width + 1)
         masterNameFormatted = masterName.ljust(col1Width + 1)
 
         print "%s | %s" % (masterNameFormatted, masterGlyphWidth)
     print "%s |\n%s | %s" % (col1Spacer, col1Divider, col2Divider)
+
+print unevenGlyphs
+print "---"
+print newTabGlyphs
 
 # --------------------
 # Open uneven glyphs in new tab
