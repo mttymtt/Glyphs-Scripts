@@ -97,7 +97,7 @@ for g in exportableGlyphs:
 # Make a table of glyphs with uneven widths across masters
 # --------------------
 
-print "%s | %s\n%s | %s" % (col1, col2, col1Divider, col2Divider)
+print "%s | %s\n%s | %s\n%s | %s" % (col1Divider, col2Divider, col1, col2, col1Divider, col2Divider)
 
 newTabGlyphs = []
 
