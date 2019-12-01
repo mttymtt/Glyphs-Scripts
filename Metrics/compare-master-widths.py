@@ -1,12 +1,9 @@
-#MenuTitle: Compare Master Widths
+# MenuTitle: Compare Master Widths
 # -*- coding: utf-8 -*-
+
 __doc__="""
 Compare widths across font masters of the open font. Outputs a report in Macro Window, and opens Glyphs with mismatched widths in a new tab.
 """
-
-# Need to figure out how to deal with more than two masters
-# Right now it is comparing each master individually to just the first master
-# So it is duplicating information/glyphs
 
 # --------------------
 # Variables
