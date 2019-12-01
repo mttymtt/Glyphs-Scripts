@@ -99,9 +99,17 @@ for g in exportableGlyphs:
 
 print "%s | %s\n%s | %s" % (col1, col2, col1Divider, col2Divider)
 
+newTabGlyphs = []
+
 for g in unevenGlyphs:
     glyphName = g.name
 
+    # reformat the list of uneven glyphs to reopen later in a new tab
+    firstMaster = f.masters[0]
+    firstMasterGlyph = g.layers[firstMaster.id]
+    newTabGlyphs.append(firstMasterGlyph)
+
+    # start building the table
     print "%s |\n%s |\n%s |" % (col1Spacer, glyphNameFormatted, col1Spacer)
 
     for i, master in enumerate(f.masters):
@@ -119,13 +127,6 @@ for g in unevenGlyphs:
 # --------------------
 # Open uneven glyphs in new tab
 # --------------------
-
-newTabGlyphs = []
-
-for g in unevenGlyphs:
-    firstMaster = f.masters[0]
-    firstMasterGlyph = g.layers[firstMaster.id]
-    newTabGlyphs.append(firstMasterGlyph)
 
 newTab = f.newTab()
 newTab.layers = newTabGlyphs
