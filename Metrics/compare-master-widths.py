@@ -121,10 +121,6 @@ for g in unevenGlyphs:
         print "%s | %s" % (masterNameFormatted, masterGlyphWidth)
     print "%s |\n%s | %s" % (col1Spacer, col1Divider, col2Divider)
 
-print unevenGlyphs
-print "---"
-print newTabGlyphs
-
 # --------------------
 # Open uneven glyphs in new tab
 # --------------------
