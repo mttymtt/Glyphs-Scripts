@@ -5,16 +5,16 @@ __doc__="""
 Compare widths across font masters of the open font. Outputs a report in Macro Window, and opens Glyphs with mismatched widths in a new tab.
 """
 
+# brings macro window to front and clears its log:
+Glyphs.clearLog()
+Glyphs.showMacroWindow()
+
 # --------------------
 # Variables
 # --------------------
 
 f = Glyphs.font # open font
 exportableGlyphs = [g for g in f.glyphs if f.export]
-
-# brings macro window to front and clears its log:
-Glyphs.clearLog()
-Glyphs.showMacroWindow()
 
 # --------------------
 # Table
