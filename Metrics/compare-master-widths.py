@@ -14,7 +14,7 @@ Glyphs.showMacroWindow()
 # --------------------
 
 currentFont = Glyphs.font # open font
-exportableGlyphs = [g for g in currentFont.glyphs if currentFont.export]
+exportableGlyphs = [g for g in currentFont.glyphs if g.export]
 
 # --------------------
 # Table
